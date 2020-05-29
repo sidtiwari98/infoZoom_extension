@@ -2,15 +2,54 @@
 <html>
 <head>
     <style>
-        button {
-            height: 30px;
-            width: 30px;
+        body {
+            height: 1000px;
+            width: 400px;
             outline: none;
+        }
+
+        div {
+            height: 180px;
+            /*width: 200px;*/
+            outline: none;
+        }
+
+        #dictionary_container {
+            height: 75px;
+        }
+
+        #search_button_container {
+            height: 20px;
         }
     </style>
 </head>
 <body>
-<button id="changeColor"></button>
-<script src="popup.js"></script>
+<div>
+    <div id="search_button_container">
+        <input id="search_button" , type="button"
+               value="Get Selection"
+               />
+    </div>
+    <div id="google_images_container">
+        <h2 id="google_images">Images</h2>
+    </div>
+    <br/>
+    <div id="dictionary_container">
+        <h2 id="dictionary">Meaning</h2>
+    </div>
+    <br/>
+    <div id="news_container">
+        <h2 id="news">News</h2>
+    </div>
+    <div>
+        <form name="testform">
+            <textarea name="selectedtext"
+                      rows="5"
+                      cols="20"></textarea>
+        </form>
+    </div>
+    <!--<button id="changeColor"></button>-->
+    <script src="popup.js"></script>
+</div>
 </body>
 </html>
