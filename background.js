@@ -1,6 +1,6 @@
 chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({selectedText: ''}, function() {
-    console.log("selected text is set")
+    console.log("selected text is set to >> '' ", )
   });
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{

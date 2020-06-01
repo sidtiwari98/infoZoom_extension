@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "InfoZoom",
   "version": "0.1",
-  "permissions": ["declarativeContent","storage", "*://*/*"],
+  "permissions": ["declarativeContent","storage", "*://*/*", "activeTab"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
