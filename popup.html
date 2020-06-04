@@ -21,17 +21,32 @@
         #search_button_container {
             height: 20px;
         }
+
+        #image_container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #image1, #image2, #image3 {
+            width: 130px;
+            height: 130px;
+        }
     </style>
 </head>
 <body>
 <div>
     <div id="search_button_container">
         <input id="search_button" , type="button"
-               value="Get Selection"
-               />
+               value="Get Images and Wiki"
+        />
     </div>
     <div id="google_images_container">
         <h2 id="google_images">Images</h2>
+        <div id="image_container">
+            <img id="image1" src="images/43y87z.jpg" alt="image 1">
+            <img id="image2" src="images/43y87z.jpg" alt="image 2">
+            <img id="image3" src="images/43y87z.jpg" alt="image 3">
+        </div>
     </div>
     <br/>
     <div id="dictionary_container">
@@ -41,13 +56,14 @@
     <div id="news_container">
         <h2 id="news">News</h2>
     </div>
-    <div>
-        <form name="testform">
-            <textarea name="selectedtext"
-                      rows="5"
-                      cols="20"></textarea>
-        </form>
-    </div>
+<!--    for testing if the highlighted word is stored-->
+<!--    <div>-->
+<!--        <form name="testform">-->
+<!--            <textarea name="selectedtext"-->
+<!--                      rows="5"-->
+<!--                      cols="20"></textarea>-->
+<!--        </form>-->
+<!--    </div>-->
     <!--<button id="changeColor"></button>-->
     <script src="popup.js"></script>
 </div>
