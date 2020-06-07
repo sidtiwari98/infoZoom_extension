@@ -8,7 +8,7 @@ function getSelectedText() {
     console.log(data.selectedText);
     textToSearch = data.selectedText;
     if (textToSearch.length) {
-      // SearchImage();
+      SearchImage();
       getWiki(textToSearch);
     }
   })
