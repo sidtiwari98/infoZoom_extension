@@ -5,6 +5,10 @@ body {
     width: 400px;
     outline: none;
 }
+
+a{
+    color: #F4B41A;
+}
 #search_button_container{
     padding:10px;
     display: flex;
