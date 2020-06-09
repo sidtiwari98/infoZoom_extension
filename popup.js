@@ -1,5 +1,7 @@
 document.getElementById("search_button").addEventListener("click", getSelectedText);
 let textToSearch = '';
+let ApiKey = config.GoogleCustomSearchApiKey;
+let cx = config.GoogleCustomSearchCx;
 
 function getSelectedText() {
   chrome.storage.sync.get('selectedText', function (data) {
@@ -17,7 +19,22 @@ function getSelectedText() {
 async function SearchImage() {
   let data;
   try {
-    let response = await fetch(`https://www.googleapis.com/customsearch/v1?q=${textToSearch}&key=AIzaSyAkCdD1ro_UiO05w8iqAdFjNCCCbgqnSlY&num=7&start=1&searchType=image&imgSize=medium&cx=014315630586445032606:me0hgspmvrs`);
+    let url = "https://www.googleapis.com/customsearch/v1";
+
+    let params = {
+      key: ApiKey,
+      num: 7,
+      start:1,
+      searchType: "image",
+      imgSize: "medium",
+      cx: cx
+    };
+
+    url = url + `?q=${textToSearch}`;
+    Object.keys(params).forEach(function (key) {
+      url += "&" + key + "=" + params[key];
+    });
+    let response = await fetch(url);
     data = await response.json();
   } catch (err) {
     console.log(err);
